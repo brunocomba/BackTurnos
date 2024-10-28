@@ -5134,11 +5134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\ModelsTests\\ModelsTests.csproj",
+      "projectUniqueName": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\ModelsTests\\ModelsTests.csproj",
       "projectName": "ModelsTests",
-      "projectPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\ModelsTests\\ModelsTests.csproj",
+      "projectPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\ModelsTests\\ModelsTests.csproj",
       "packagesPath": "C:\\Users\\brcom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\ModelsTests\\obj\\",
+      "outputPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\ModelsTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\brcom\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5155,8 +5155,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\Models\\Models.csproj"
+            "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\Models\\Models.csproj"
             }
           }
         }

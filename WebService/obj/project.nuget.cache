@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FOTUZbi/V5HcGi0QnfvHCkWHD8e9Q4nUH5KiCjQ1WRcwvRzDdmVHveLnLa5Rmgx2NDQLvohDDjFezwfupSF2nw==",
+  "dgSpecHash": "B1lbJA4KwfRnyGnL5E9PwvXBxUSBNu6zQQ1oqe2V/jB+/wjZYzuvbSeLo68/sjYdXuPdK48SCuDXY9efMtee2A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\Back_GestionTurnos\\WebService\\WebService.csproj",
+  "projectFilePath": "C:\\Users\\brcom\\OneDrive\\Documentos\\GitHub\\BackTurnos\\WebService\\WebService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brcom\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\brcom\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
