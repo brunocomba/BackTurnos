@@ -153,8 +153,10 @@ namespace WebService.Controllers
         }
 
 
-        [Authorize]
+        [AllowAnonymous]
+
         [HttpPost("add")]
+
         public async Task<ActionResult<Administrador>> Add(AltaAdmDTO altaDto)
         {
             string response;
