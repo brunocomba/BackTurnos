@@ -145,15 +145,19 @@ namespace Models.Managers
 
             _v.SoloNumeros(dto.idAdmiMod);
             _v.MayorDe0(dto.idAdmiMod);
-            var admiMod = await _v.IdRegistrado(dto.idAdmiMod); 
-
-            _v.PassAnteriorCorrecta(dto.passAntigua, admiMod.Password);
-            _v.PassRegistradaDistinta(dto.passNew, admiMod.Password);
+            var admiMod = await _v.IdRegistrado(dto.idAdmiMod);
+            
+            // verificar pass antigua (esta hasheada la antigua)
+            VerifyPassword(dto.passAntigua, admiMod.Password);
+            _v.PassRegistradaDistinta(dto.passNew, dto.passAntigua);
             _v.CumpleRequisitosPass(dto.passNew);
             _v.ConfirmarPass(dto.passNew, dto.confirPassNew);
 
+            // hashear la nueva pass
+            var newPassHash = HashPassword(dto.passNew);
+
             // Modificar objeto
-            admiMod.Password = dto.passNew;
+            admiMod.Password = newPassHash;
 
             _context.Administradores.Update(admiMod);
             await _context.SaveChangesAsync();
