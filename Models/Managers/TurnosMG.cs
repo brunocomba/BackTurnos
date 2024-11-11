@@ -108,7 +108,6 @@ namespace Models.Managers
         public override async Task<IEnumerable<Turno>> GetAllAsync()
         {
             return await _context.Set<Turno>()
-                .Include(t => t.Administrador)
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .ToListAsync();
@@ -118,7 +117,6 @@ namespace Models.Managers
         public override async Task<Turno> GetByIdAsync(int id)
         {
             var turno = await _context.Set<Turno>()
-                .Include (t => t.Administrador)
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .FirstOrDefaultAsync(t => t.Id == id);
@@ -210,7 +208,6 @@ namespace Models.Managers
             
             // Filtrar los turnos que están en ese rango
             var turnosDeLaSemana = await _context.Turnos.Where(t => t.Fecha >= inicioSemana && t.Fecha <= finSemana)
-                .Include(t => t.Administrador)
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .ToListAsync();
@@ -225,7 +222,7 @@ namespace Models.Managers
             int año = fecha.Year;
 
             // Filtrar turnos que coincidan con el mes y año proporcionados
-            var turnosDelMes = await _context.Turnos.Where(t => t.Fecha.Month == mes && t.Fecha.Year == año).Include(t => t.Administrador)
+            var turnosDelMes = await _context.Turnos.Where(t => t.Fecha.Month == mes && t.Fecha.Year == año)
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .ToListAsync();
@@ -236,7 +233,7 @@ namespace Models.Managers
 
         public async Task<IEnumerable<Turno>> TurnosDelDia(DateTime fecha)
         {
-            var turnosDelDia = await _context.Turnos.Where(t => t.Fecha.Date == fecha.Date).Include(t => t.Administrador)
+            var turnosDelDia = await _context.Turnos.Where(t => t.Fecha.Date == fecha.Date)
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .ToListAsync();
@@ -258,7 +255,7 @@ namespace Models.Managers
 
             // Filtra los turnos que coinciden con el nombre, apellido o DNI del cliente
             var turnosFiltrados =  await _context.Turnos.Where(t => t.Cliente.Nombre.ToUpper().Contains(criterio.ToUpper()) || t.Cliente.Apellido.ToUpper().Contains(criterio.ToUpper()) ||
-                             (esNumero == true && t.Cliente.Dni == dni)).Include(t => t.Administrador)
+                             (esNumero == true && t.Cliente.Dni == dni))
                 .Include(t => t.Cliente)
                 .Include(t => t.Cancha)
                 .ToListAsync();

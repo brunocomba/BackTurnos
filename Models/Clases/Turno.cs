@@ -8,7 +8,6 @@ namespace Models.Clases
         public DateTime Fecha { get; set; }
         public TimeSpan Horario { get; set; }
 
-        public Administrador Administrador { get; set; }
         public Cancha Cancha{ get; set; }
         public Cliente Cliente { get; set; }
 
