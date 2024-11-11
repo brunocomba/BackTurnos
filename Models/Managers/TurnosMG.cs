@@ -143,7 +143,6 @@ namespace Models.Managers
             
             TurnoRegistrado(formatoHr, dto.Fecha, cancha);
             EsFechaPasada(dto.Fecha);
-            EsHorarioPasado(formatoHr);
 
             Turno turno = new Turno();
             {
