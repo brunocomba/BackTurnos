@@ -29,7 +29,7 @@ namespace Models.Managers
             }
             _v.PrecioMayorDe0(dto.Precio);
             _v.SoloLetras(dto.Name);
-            _v.SoloNumeros(dto.idDep); _v.SoloNumerosEnPrecio(dto.Precio); 
+            _v.SoloNumeros(dto.idDep);  
             await _v.NombreRegistrado(dto.Name);
             var deporte = await _deporteManager.GetByIdAsync(dto.idDep); // Buscar el deporte
 
