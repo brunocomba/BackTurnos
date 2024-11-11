@@ -60,9 +60,9 @@ namespace WebService.Controllers
 
 
         [HttpGet("buscar/porDni{dni}")]
-        public async Task<ActionResult<IEnumerable<Cliente>>> BuscarPorDni(int dni)
+        public async Task<ActionResult<Cliente>> BuscarPorDni(int dni)
         {
-            IEnumerable<Cliente> response;
+            Cliente response;
             try
             {
                 response = await _clienteManager.BuscarPorDni(dni);
