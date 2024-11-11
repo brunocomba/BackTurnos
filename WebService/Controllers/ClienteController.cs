@@ -59,7 +59,7 @@ namespace WebService.Controllers
         }
 
 
-        [HttpGet("buscar/porDni")]
+        [HttpGet("buscar/porDni{dni}")]
         public async Task<ActionResult<IEnumerable<Cliente>>> BuscarPorDni(int dni)
         {
             Cliente response;
