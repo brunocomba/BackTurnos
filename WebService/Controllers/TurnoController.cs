@@ -6,6 +6,7 @@ using Models.DTOs.Turno;
 
 namespace WebService.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("turnos")]
     public class TurnoController : ControllerBase
